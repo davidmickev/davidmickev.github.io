@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+  font-family: monospace;
+  width: 100%;
+  position:absolute;
+}
+
+p {
+  margin-left: 30px;
+  margin-bottom: -10px;
+  font-size: 20px;
+}
+
+button {
+  font-size: 1em;
+  font-family: monospace;
+  background-color: #f8bbd0;
+  cursor: pointer;
+  border-width: 0em;
+  padding: .5em;
+  border-style: solid;
+  color: #fff;
+}
+
+.purple {
+  background-color: #651fff;
+}
+
+.blue {
+  background-color: #ff8f00;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+#links {
+  font-size: 20px;
+  margin-top: 30px;
+  margin-right: 60px;
+  text-align: right;
+}
+
+#name {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  margin-left: 40px;
+  display: block;
+}
+
+.letter {
+  font-size: 200px;
+  line-height: 90px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
+  letter-spacing: -20px;
+  mix-blend-mode: color-burn;
+  position: relative;
+  transition: top ease 0.1s;
+  transition-delay: 2s;
+  opacity: 0.8;
+}
+
+@keyframes mymove {
+
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 20px;
+  }
+  100% {
+    top: 0px;
+}
+
+}
+
+.hovered {
+  animation: mymove 3s;
+}
+
+
+
+::selection {
+  background: #b39ddb;
+}
+
