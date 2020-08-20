@@ -3,11 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import $ from 'jquery';
-
-
-
 import randColor from './headerStyle';
+import $ from 'jquery';
 
 ReactDOM.render(
   <React.StrictMode>
