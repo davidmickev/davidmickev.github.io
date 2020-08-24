@@ -25,16 +25,10 @@ Array.from(document.getElementsByClassName('letter')).forEach(letter => {
   })
 })
 
-
-
 class StickyNavigation {
 
-
-
 	//Add an event listener that fires when a user clicks a button:
-
 	// document.getElementById("myBtn").addEventListener("click", displayDate);
-	
 	//element.addEventListener(event, function, useCapture);
 
 	constructor() {
@@ -48,7 +42,6 @@ class StickyNavigation {
 		// });
 		// $(window).scroll(() => { this.onScroll(); });
 		// $(window).resize(() => { this.onResize(); });
-
 		// $('.et-hero-tab').click(function() { 
 		// 	self.onTabClick(event, $(this)); 
 		// });

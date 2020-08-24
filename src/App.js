@@ -1,5 +1,4 @@
 import React from 'react';
-import Rand from './headerStyle'
 import logo from './logo.svg';
 import './App.css';
 import randColor from './headerStyle';
@@ -14,9 +13,14 @@ function App() {
   <button className="purple" style={{color: "blue"}}>About</button>
   <button className="blue">Portfolio</button>
   <button className="green">Contact</button>
+
 </div>
-<div id="content">
-<div id="name">
+
+
+
+<section class="et-hero-tabs">
+    <h1>
+    <div id="name">
   <span className="logo">
     {/*<span id="1" className="letter" classNameName="hovered">D</span>*/}
   <span id="1" className="letter" style={{color:randColor()}} >D</span>
@@ -38,16 +42,13 @@ function App() {
     <span id="15" className="letter" style={{color:randColor()}} >u</span>
     <span id="16" className="letter" style={{color:randColor()}} >s</span>
     
+    <p>My desire is to create.</p>
+    <p>Website down 8/4 changing format and interactions.</p>
   </span>
 </div>
 
 
-<p>My desire is to create.</p>
-<p>Website down 8/4 changing format and interactions.</p>
-
-
-<section class="et-hero-tabs">
-    <h1>STICKY SLIDER NAV</h1>
+    </h1>
     <h3>Sliding content with sticky tab nav</h3>
     <div class="et-hero-tabs-container">
       <a class="et-hero-tab" href="#tab-es6">ES6</a>
@@ -85,7 +86,7 @@ function App() {
 
 </div>
       
-    </div>
+  
   );
 }
 

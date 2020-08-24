@@ -95,7 +95,6 @@ button {
 }
 
 @keyframes mymove {
-
   0% {
     top: 0px;
   }
@@ -104,17 +103,13 @@ button {
   }
   100% {
     top: 0px;
-}
-
+  }
 }
 
 .hovered {
   animation: mymove 3s;
 }
 
-
-
 ::selection {
   background: #b39ddb;
 }
-
