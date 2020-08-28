@@ -2,6 +2,25 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import randColor from './headerStyle';
+import styled from 'styled-components';
+import lii from './icons/linkedin-icon.png';
+import ghi from './icons/github-icon.png';
+import ci from './icons/contact-icon.png';
+
+const Icon = styled.div
+`width: 9ch;
+height: 9ch;
+margin-right: 2ch;
+background: transparent;
+border-radius: ${props => props.radius};
+filter: drop-shadow(2px 2px 5px rgba(192,192,192, 0.5));
+background-size: cover;
+background-position: center center;
+background-image: url(${props => props.icon});
+transition: box-shadow 1s;
+will-change: transform;
+cursor: pointer;`
+  
 
 function App() {
   return (
@@ -10,6 +29,11 @@ function App() {
     {/*name info*/}
 
     <div id="links">
+    <Icon radius='100px' icon={lii} />
+    <Icon radius='100px' icon={ghi} />
+    <Icon radius='100px' icon={ci} />
+    
+    
   <button className="purple" style={{color: "blue"}}>About</button>
   <button className="blue">Portfolio</button>
   <button className="green">Contact</button>

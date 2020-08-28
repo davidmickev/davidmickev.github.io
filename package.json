@@ -41,9 +41,11 @@
   "devDependencies": {
     "gh-pages": "^3.1.0"
   },
-  
-    "rules": {
-        "no-restricted-globals": ["error", "event", "fdescribe"]
-    }
-
+  "rules": {
+    "no-restricted-globals": [
+      "error",
+      "event",
+      "fdescribe"
+    ]
+  }
 }
