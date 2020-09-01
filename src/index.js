@@ -33,7 +33,7 @@ gsap.timeline({ repeat:2, repeatDelay:0, yoyo:true})
 
 let currentMask = 1;
 function swapMask(){
-  if (currentMask==3) currentMask = 1;
+  if (currentMask===3) currentMask = 1;
   else currentMask++;
   gsap.set('.m', {attr:{'xlink:href':'https://assets.codepen.io/721952/liquidMask'+currentMask+'.svg'}})
 }
@@ -44,8 +44,7 @@ class StickyNavigation {
 		this.currentId = null;
 		this.currentTab = null;
 		this.tabContainerHeight = 70;
-		let self = this;
-
+		//let self = this;
 		// $('.et-hero-tab').click(function() { 
 		// 	self.onTabClick(event, $(this)); 
 		// });
@@ -95,7 +94,7 @@ class StickyNavigation {
 				newCurrentTab = $(this);
 			}
 		});
-		if(this.currentId != newCurrentId || this.currentId === null) {
+		if(this.currentId !== newCurrentId || this.currentId === null) {
 			this.currentId = newCurrentId;
 			this.currentTab = newCurrentTab;
 			this.setSliderCss();
