@@ -1,0 +1,74 @@
+$colors: blue,FUCHSIA,FUCHSIA,PURPLE,blue,PURPLE,FUCHSIA,FUCHSIA,blue;
+  
+.loader {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  background: #F5F5F5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg); 
+  filter: blur(10px) contrast(18);
+}
+
+.particle {
+  //background: #000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.particle:first-child,
+.particle:last-child {
+  width: 25px;
+  height: 25px;
+}
+
+.particle:nth-child(odd) {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.leftSpin {
+  animation: leftSpin 2.4s linear infinite;
+}
+
+.rightSpin {
+  animation: rightSpin 2s linear infinite;
+}
+
+.particle:nth-child(3) { animation-delay: .25s; }
+.particle:nth-child(5) { animation-delay: .75s; }
+.particle:nth-child(7) { animation-delay: 1.25s; }
+.particle:nth-child(9) { animation-delay: .5s; }
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.8);}
+  70% {transform: scale(0.6);}
+  100% {transform: scale(1);}
+}
+
+@keyframes leftSpin {
+  from {
+    transform: rotate(0deg) translateX(50px);
+  }
+  to {
+    transform: rotate(360deg) translateX(50px);
+  }
+}
+
+@keyframes rightSpin {
+  from {
+    transform: rotate(360deg) translateX(50px);
+  }
+  to {
+    transform: rotate(0deg) translateX(50px);
+  }
+}
+
+@for $i from 1 through length($colors) {
+  .particle:nth-child(#{length($colors)}n+#{$i}) {
+    background: nth($colors, $i);
+  }
+}

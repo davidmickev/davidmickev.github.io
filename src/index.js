@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import randColor from './headerStyle';
 import $ from 'jquery';
 import './navBar.scss';
+import gsap from 'gsap';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -25,11 +27,18 @@ Array.from(document.getElementsByClassName('letter')).forEach(letter => {
   })
 })
 
-class StickyNavigation {
+gsap.timeline({ repeat:2, repeatDelay:0, yoyo:true})
+    .to('.m', {duration:(i)=>[0.8,1.3][i], y:-10266, ease:'steps(29)', stagger:-0.3}, 0)
+    .to('.frog', {duration:3, scale:1.1, transformOrigin:'50% 50%', ease:'power2', onComplete:swapMask}, 0)
 
-	//Add an event listener that fires when a user clicks a button:
-	// document.getElementById("myBtn").addEventListener("click", displayDate);
-	//element.addEventListener(event, function, useCapture);
+let currentMask = 1;
+function swapMask(){
+  if (currentMask==3) currentMask = 1;
+  else currentMask++;
+  gsap.set('.m', {attr:{'xlink:href':'https://assets.codepen.io/721952/liquidMask'+currentMask+'.svg'}})
+}
+
+class StickyNavigation {
 
 	constructor() {
 		this.currentId = null;
@@ -40,17 +49,13 @@ class StickyNavigation {
 		// $('.et-hero-tab').click(function() { 
 		// 	self.onTabClick(event, $(this)); 
 		// });
-		// $(window).scroll(() => { this.onScroll(); });
-		// $(window).resize(() => { this.onResize(); });
-		// $('.et-hero-tab').click(function() { 
-		// 	self.onTabClick(event, $(this)); 
-		// });
 		$(window).scroll(() => { this.onScroll(); });
 		$(window).resize(() => { this.onResize(); });
 	}
 	
 	
 	onTabClick(event, element) {
+		
 		event.preventDefault();
 		let scrollTop = $(element.attr('href')).offset().top - this.tabContainerHeight + 1;
 		$('html, body').animate({ scrollTop: scrollTop }, 600);
@@ -58,7 +63,7 @@ class StickyNavigation {
 	
 	onScroll() {
 		this.checkTabContainerPosition();
-    this.findCurrentTabSelector();
+    	this.findCurrentTabSelector();
 	}
 	
 	onResize() {
@@ -108,12 +113,13 @@ class StickyNavigation {
 		$('.et-hero-tab-slider').css('left', left);
 	}
 	
+
 }
 
 new StickyNavigation();
 
 
-
+//<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

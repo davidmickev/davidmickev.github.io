@@ -42,9 +42,10 @@ p {
 }
 
 button {
-  font-size: 1em;
+  font-size: .7em;
+  text-align: left;
   font-family: monospace;
-  background-color: #f8bbd0;
+  background-color: #fff;
   cursor: pointer;
   border-width: 0em;
   padding: .5em;
@@ -56,29 +57,27 @@ button {
   background-color: #651fff;
 }
 
-.blue {
-  background-color: #ff8f00;
-}
 
-.green {
-  background-color: #4caf50;
-}
+
 
 #links {
   font-size: 20px;
-  margin-top: 30px;
-  margin-right: 60px;
+  margin-top: 0px;
+  margin-right: 0px;
   text-align: right;
+  background-color: #fff;
 }
 
 #name {
   margin-top: 50px;
   margin-bottom: 30px;
+  background-image: '\dmlogo.png';
 }
 
 .logo {
   margin-left: 40px;
   display: block;
+  background-image: 'url(dmlogo.png)';
 }
 
 .letter {

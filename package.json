@@ -1,5 +1,5 @@
 {
-  "homepage": "https://davidmickev.github.io/portfolio",
+  "homepage": "https://davidmickev.github.io/",
   "name": "my-app",
   "version": "0.1.0",
   "private": false,
@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "error-ex": "git+https://github.com/Qix-/node-error-ex.git",
+    "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",

@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import randColor from './headerStyle';
 import styled from 'styled-components';
-import lii from './icons/linkedin-icon.png';
-import ghi from './icons/github-icon.png';
-import ci from './icons/contact-icon.png';
+import linkedini from './icons/linkedin-icon.png';
+import githubi from './icons/github-icon.png';
+import contacti from './icons/contact-icon.png';
+import resumei from './icons/resume-icon.png';
+import './loader.scss';
+import svgAnim from './images/liquidMask1.svg';
+import frog from './images/froggy.jpg';
 
 const Icon = styled.div
 `width: 9ch;
@@ -23,20 +26,34 @@ cursor: pointer;`
   
 
 function App() {
+
+  
   return (
     <div className="App">
     
-    {/*name info*/}
+    {/*Links*/}
 
     <div id="links">
-    <Icon radius='100px' icon={lii} />
-    <Icon radius='100px' icon={ghi} />
-    <Icon radius='100px' icon={ci} />
-    
-    
-  <button className="purple" style={{color: "blue"}}>About</button>
-  <button className="blue">Portfolio</button>
-  <button className="green">Contact</button>
+    <button className="icon" style={{color:randColor()}}>
+      Linked In
+      <Icon radius='100px' icon={linkedini} />
+      </button>
+
+    <button className="icon" style={{color:randColor()}}>
+      GitHub
+      <Icon radius='100px' icon={githubi} />
+      </button>
+
+
+    <button className="icon" style={{color:randColor()}}>
+      Contact
+      <Icon radius='100px' icon={contacti} />
+      </button>
+
+    <button className="icon" style={{color:randColor()}}>
+      Resume
+      <Icon radius='100px' icon={resumei} />
+      </button>
 
 </div>
 
@@ -45,7 +62,10 @@ function App() {
 <section class="et-hero-tabs">
     <h1>
     <div id="name">
+
+      
   <span className="logo">
+    
     {/*<span id="1" className="letter" classNameName="hovered">D</span>*/}
   <span id="1" className="letter" style={{color:randColor()}} >D</span>
   <span id="2" className="letter" style={{color:randColor()}} >a</span>
@@ -67,9 +87,14 @@ function App() {
     <span id="16" className="letter" style={{color:randColor()}} >s</span>
     
     <p>My desire is to create.</p>
+    <p>I'm a software engineer based in the Chicago , MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.</p>
+    
     <p>Website down 8/4 changing format and interactions.</p>
   </span>
 </div>
+
+
+
 
 
     </h1>
@@ -104,9 +129,26 @@ function App() {
     <section class="et-slide" id="tab-other">
       <h1>Other</h1>
       <h3>something about other</h3>
-    </section>
-  </main>
 
+      
+    </section>
+
+    <div class="mainfrog">
+  <svg viewBox="0 0 630 352" xmlns="http://www.w3.org/2000/svg">
+    <mask id="m1">
+        <image class="m" href={svgAnim} y="-1" width="630" height="10620" />
+    </mask>
+    <mask id="m2">
+        <image class="m" class="maskImg" href={svgAnim} y="-1" width="630" height="10620" />
+    </mask>
+    <image mask="url(#m2)" href={frog} width="630" height="420" />
+    <g mask="url(#m1)">
+      <image class="frog" href={frog} width="630" height="420" />
+    </g>
+  </svg>
+</div>
+
+  </main>
 
 </div>
       
