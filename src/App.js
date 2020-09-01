@@ -143,7 +143,7 @@ function App() {
               <image class="m" href={svgAnim} y="-1" width="630" height="10620" />
             </mask>
             <mask id="m2">
-              <image class="m" class="maskImg" href={svgAnim} y="-1" width="630" height="10620" />
+              <image class="m maskImg" href={svgAnim} y="-1" width="630" height="10620" />
             </mask>
             <image mask="url(#m2)" href={frog} width="630" height="420" />
             <g mask="url(#m1)">
