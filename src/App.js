@@ -41,6 +41,7 @@ function App() {
 
     <button className="icon" style={{color:randColor()}}>
       GitHub
+      Hellooo
       <Icon radius='100px' icon={githubi} />
       </button>
 
