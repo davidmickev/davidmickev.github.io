@@ -1,14 +1,20 @@
 import React from 'react';
 import './App.css';
+import './loader.scss';
+
 import randColor from './headerStyle';
 import styled from 'styled-components';
+
+
 import linkedini from './icons/linkedin-icon.png';
 import githubi from './icons/github-icon.png';
 import contacti from './icons/contact-icon.png';
 import resumei from './icons/resume-icon.png';
-import './loader.scss';
 import svgAnim from './images/liquidMask1.svg';
 import frog from './images/froggy.jpg';
+
+import Fade from 'react-reveal/Fade';
+
 
 const Icon = styled.div
   `width: 9ch;
@@ -32,8 +38,8 @@ function App() {
     <div className="App">
 
       {/*Links*/}
-
       <div id="links">
+
         <button className="icon" style={{ color: randColor() }}>
           Linked In
       <Icon radius='100px' icon={linkedini} />
@@ -41,10 +47,8 @@ function App() {
 
         <button className="icon" style={{ color: randColor() }}>
           GitHub
-          Hellooo
       <Icon radius='100px' icon={githubi} />
         </button>
-
 
         <button className="icon" style={{ color: randColor() }}>
           Contact
@@ -60,21 +64,19 @@ function App() {
 
 
 
-      <section class="et-hero-tabs">
+      <section class="et-hero-tabs" data-image-source = "./icons/dmlogo.png">
         <h1>
           <div id="name">
-
-
             <span className="logo">
-
-              {/*<span id="1" className="letter" classNameName="hovered">D</span>*/}
+              {/*Name Animation*/}
+              <img id= "./icons/dmlogo.png" alt=""></img>
               <span id="1" className="letter" style={{ color: randColor() }} >D</span>
               <span id="2" className="letter" style={{ color: randColor() }} >a</span>
               <span id="3" className="letter" style={{ color: randColor() }} >v</span>
               <span id="4" className="letter" style={{ color: randColor() }} >i</span>
               <span id="5" className="letter" style={{ color: randColor() }} >d</span>
-            </span>
-            <span className="logo">
+              
+              <br></br>
               <span id="6" className="letter" style={{ color: randColor() }} >M</span>
               <span id="7" className="letter" style={{ color: randColor() }} >i</span>
               <span id="8" className="letter" style={{ color: randColor() }} >c</span>
@@ -86,8 +88,8 @@ function App() {
               <span id="14" className="letter" style={{ color: randColor() }} >i</span>
               <span id="15" className="letter" style={{ color: randColor() }} >u</span>
               <span id="16" className="letter" style={{ color: randColor() }} >s</span>
-
               
+
               <p>I'm a software engineer based in the Chicago ,IL. I specializing in building and designing applications, implementing advanced algorithms, and everything in between.</p>
               <p>My desire is to create.</p>
             </span>
@@ -108,9 +110,10 @@ function App() {
 
       <main class="et-main">
         <section class="et-slide" id="tab-es6">
-          <h1>About me</h1>
-          <p>
-            Hello! My name is David, a software engineer based in Chicago. <br></br>
+          <Fade top>
+            <h1>About me</h1>
+            <p>
+              Hello! My name is David, a software engineer based in Chicago. <br></br>
         I enjoy creation and implementation of ideas, my focus is designing applications, creation and implementation of algorithms and everything in between. <br></br>
         My goal and focus is producing scalable code and technologies that meet modern space and time complexity associated with computation. <br></br>
         I am researching algorithmic implementations and application design. <br></br>
@@ -118,23 +121,34 @@ function App() {
         Here are a few technologies I've been working with recently: <br></br>
         .... TODO
       </p>
+          </Fade>
         </section>
 
         <section class="et-slide" id="tab-flexbox">
-          <h1>Projects</h1>
-          <h3>TODO:</h3>
+          <Fade top>
+            <h1>Projects</h1>
+            <h3>TODO:</h3>
+          </Fade>
         </section>
+
         <section class="et-slide" id="tab-react">
-          <h1>Experience</h1>
-          <h3>TODO:</h3>
+          <Fade top>
+            <h1>Experience</h1>
+            <h3>TODO:</h3>
+          </Fade>
         </section>
+
         <section class="et-slide" id="tab-angular">
-          <h1>Other</h1>
-          <h3>TODO:</h3>
+          <Fade top>
+            <h1>Other</h1>
+            <h3>TODO:</h3>
+          </Fade>
         </section>
         <section class="et-slide" id="tab-other">
-          <h1>Contact</h1>
-          <h3>TODO</h3>
+          <Fade top>
+            <h1>Contact</h1>
+            <h3>TODO</h3>
+          </Fade>
         </section>
 
         <div class="mainfrog">

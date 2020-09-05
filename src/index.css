@@ -57,9 +57,6 @@ button {
   background-color: #651fff;
 }
 
-
-
-
 #links {
   font-size: 20px;
   margin-top: 0px;
@@ -71,13 +68,14 @@ button {
 #name {
   margin-top: 50px;
   margin-bottom: 30px;
-  background-image: '\dmlogo.png';
+  background-image: './icons/dmlogo.png';
 }
 
 .logo {
   margin-left: 40px;
   display: block;
-  background-image: 'url(dmlogo.png)';
+  background-image: './icons/dmlogo.png';
+  /*background-image: 'url(dmlogo.png)';*/
 }
 
 .letter {
