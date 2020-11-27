@@ -4,18 +4,26 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "error-ex": "git+https://github.com/Qix-/node-error-ex.git",
+    "file-saver": "^2.0.5",
     "gsap": "^3.5.1",
     "jquery": "^3.5.1",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-download-link": "^2.3.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "^3.4.3",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "styled-icons": "^10.22.0"
   },
   "scripts": {
     "start": "react-scripts start",

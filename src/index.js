@@ -16,6 +16,31 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
+function getScrollTop() {
+    if (typeof window.pageYOffset !== "undefined" ) {
+        // Most browsers
+        return window.pageYOffset;
+    }
+    var d = document.documentElement;
+    if (typeof d.clientHeight !== "undefined") {
+        // IE in standards mode
+        return d.scrollTop;
+    }
+    // IE in quirks mode
+    return document.body.scrollTop;
+}
+
+window.onscroll = function() {
+  var box = document.getElementById("links");
+  var scroll = getScrollTop();
+
+  if (scroll <= window.innerHeight) {
+      box.style.top = "000px";
+  } else {
+      box.style.top = (scroll + 2) + 100 +"px";
+  }
+};
+
 Array.from(document.getElementsByClassName('letter')).forEach(letter => {
   letter.addEventListener("mouseover", (e) => {
     letter.classList.add("hovered")

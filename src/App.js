@@ -1,22 +1,28 @@
 import React from 'react';
+import Fade from 'react-reveal/Fade';
 import './App.css';
 import './loader.scss';
 
+// Rand color interaction with header
 import randColor from './headerStyle';
 import styled from 'styled-components';
 
-
-import linkedini from './icons/linkedin-icon.png';
-import githubi from './icons/github-icon.png';
-import contacti from './icons/contact-icon.png';
-import resumei from './icons/resume-icon.png';
+// Froggy footer
 import svgAnim from './images/liquidMask1.svg';
 import frog from './images/froggy.jpg';
 
-import Fade from 'react-reveal/Fade';
+// Saving resume PDF
+import { saveAs } from 'file-saver';
 
+// Icons for socials using fortawesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {library} from '@fortawesome/fontawesome-svg-core'
 
-const Icon = styled.div
+import { faGithub , faLinkedin ,faMailchimp } from '@fortawesome/free-brands-svg-icons';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+library.add(faGithub,faLinkedin,faMailchimp,faFilePdf)
+
+export const Icon = styled.div
   `width: 9ch;
 height: 9ch;
 margin-right: 2ch;
@@ -28,55 +34,61 @@ background-position: center center;
 background-image: url(${props => props.icon});
 transition: box-shadow 1s;
 will-change: transform;
-cursor: pointer;`
+cursor: pointer;
+color: black;
+`
 
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+  if (newWindow) newWindow.opener = null
+};
+
+const saveFile = () => {
+  saveAs(
+    process.env.PUBLIC_URL +'/dmr.pdf',
+    "Deividas Mickevicius Resume.pdf"
+  );
+};
 
 function App() {
-
-
   return (
+    
+    <body>
     <div className="App">
-
-      {/*Links*/}
       <div id="links">
-
-        <button className="icon" style={{ color: randColor() }}>
-          Linked In
-      <Icon radius='100px' icon={linkedini} />
+        <button className="button" style={{ color: '#0e76a8' }} onClick={() => {openInNewTab("https://www.linkedin.com/in/davidmickev/")}}>
+          <FontAwesomeIcon  size = "4x" icon={faLinkedin} />
+          <span id ="textlink"> Linkedin </span>
+        </button>
+      
+        <button className="button" style={{ color: '#333' }} onClick={() => {openInNewTab("https://github.com/davidmickev")}}>
+          <FontAwesomeIcon  size = "4x" icon={faGithub} />
+          <span id ="textlink">  Github </span>
         </button>
 
-        <button className="icon" style={{ color: randColor() }}>
-          GitHub
-      <Icon radius='100px' icon={githubi} />
+        <button className="button" style={{ color: '#009900' }} onClick={() => {openInNewTab("mailto:davidmickev@gmail.com")}}>
+          <FontAwesomeIcon  size = "4x" icon={faMailchimp} />
+          <span id ="textlink"> Contact </span>
         </button>
-
-        <button className="icon" style={{ color: randColor() }}>
-          Contact
-      <Icon radius='100px' icon={contacti} />
+        
+        <button className="button" style={{ color: 'red' }} onClick={(saveFile)}  >
+          <FontAwesomeIcon size = "4x" icon={faFilePdf}></FontAwesomeIcon>
+          <span id ="textlink"> Resume </span>
         </button>
-
-        <button className="icon" style={{ color: randColor() }}>
-          Resume
-      <Icon radius='100px' icon={resumei} />
-        </button>
-
       </div>
 
-
-
-      <section class="et-hero-tabs" data-image-source = "./icons/dmlogo.png">
+      
+      <section className="et-hero-tabs" data-image-source="./icons/dmlogo.png">
         <h1>
           <div id="name">
             <span className="logo">
               {/*Name Animation*/}
-              <img id= "./icons/dmlogo.png" alt=""></img>
+              <img id="./icons/dmlogo.png" alt=""></img>
               <span id="1" className="letter" style={{ color: randColor() }} >D</span>
               <span id="2" className="letter" style={{ color: randColor() }} >a</span>
               <span id="3" className="letter" style={{ color: randColor() }} >v</span>
               <span id="4" className="letter" style={{ color: randColor() }} >i</span>
-              <span id="5" className="letter" style={{ color: randColor() }} >d</span>
-              
-              <br></br>
+              <span id="5" className="letter" style={{ color: randColor() }} >d</span> <br/>
               <span id="6" className="letter" style={{ color: randColor() }} >M</span>
               <span id="7" className="letter" style={{ color: randColor() }} >i</span>
               <span id="8" className="letter" style={{ color: randColor() }} >c</span>
@@ -88,80 +100,107 @@ function App() {
               <span id="14" className="letter" style={{ color: randColor() }} >i</span>
               <span id="15" className="letter" style={{ color: randColor() }} >u</span>
               <span id="16" className="letter" style={{ color: randColor() }} >s</span>
-              
 
-              <p>I'm a software engineer based in the Chicago ,IL. I specializing in building and designing applications, implementing advanced algorithms, and everything in between.</p>
-              <p>My desire is to create.</p>
+              <p>I'm a software engineer based in the Chicago ,IL.
+              <br/>I specializing in building and designing applications, implementing ideas, researching algorithms, and everything in between.
+              <br/>My desire is to create.</p>
             </span>
           </div>
 
+          <div className="content">
+            <div className="content__container">
+              <p className="content__container__text">
+                Hello
+                </p>
 
+              <ul className="content__container__list">
+                <li className="content__container__list__item">creators</li>
+                <li className="content__container__list__item">developers</li>
+                <li className="content__container__list__item">designers</li>
+                <li className="content__container__list__item">everybody!</li>
+              </ul>
+            </div>
+          </div>
+        
         </h1>
-        <h3>Sliding content with sticky tab nav</h3>
-        <div class="et-hero-tabs-container">
-          <a class="et-hero-tab" href="#tab-es6">About</a>
-          <a class="et-hero-tab" href="#tab-flexbox">Projects</a>
-          <a class="et-hero-tab" href="#tab-react">Experience</a>
-          <a class="et-hero-tab" href="#tab-angular">Other</a>
-          <a class="et-hero-tab" href="#tab-other">Contact</a>
-          <span class="et-hero-tab-slider"></span>
+        {/*<h3>hi</h3>*/}
+
+        <div className="et-hero-tabs-container">
+          <a className="et-hero-tab" href="#tab-es6">About</a>
+          <a className="et-hero-tab" href="#tab-flexbox">Projects</a>
+          <a className="et-hero-tab" href="#tab-react">Experience</a>
+          <a className="et-hero-tab" href="#tab-angular">Other</a>
+          <a className="et-hero-tab" href="#tab-other">Contact</a>
+          <span className="et-hero-tab-slider"></span>
         </div>
       </section>
 
-      <main class="et-main">
-        <section class="et-slide" id="tab-es6">
+      <main className="et-main">
+        <section className="et-slide" id="tab-es6">
           <Fade top>
             <h1>About me</h1>
             <p>
-              Hello! My name is David, a software engineer based in Chicago. <br></br>
-        I enjoy creation and implementation of ideas, my focus is designing applications, creation and implementation of algorithms and everything in between. <br></br>
-        My goal and focus is producing scalable code and technologies that meet modern space and time complexity associated with computation. <br></br>
-        I am researching algorithmic implementations and application design. <br></br>
-        I am graduating from University of Illinois in Chicago Spring 2021 majoring in Computer Science and Math. <br></br>
-        Here are a few technologies I've been working with recently: <br></br>
-        .... TODO
-      </p>
+            Hello! My name is David, a software engineer based in Chicago. <br/>
+            I enjoy creation and implementation of ideas; My focus is designing applications, creation and implementation of algorithms and everything in between. <br/>
+            My goal and focus is producing scalable code and technologies that meet modern space and time complexity associated with computation. <br/>
+            I am researching algorithmic implementations and application design. <br/>
+            Graduating from University of Illinois in Chicago Spring 2021 BS in Computer Science and Math. <br/>
+            Below are the tools and technologies I enjoy and have experience with <br/>
+            </p>
           </Fade>
         </section>
 
-        <section class="et-slide" id="tab-flexbox">
+        <section className="et-slide" id="tab-flexbox">
+          <Fade top>
+            <h1>Skills</h1>
+            <h3>
+            •	LANGUAGES <br/>
+              Python | Java | Scala | C/C++ | R | SQL 
+              <br/><br/>
+            •	TECHNOLOGIES <br/>
+              Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt 
+            </h3>
+          </Fade>
+        </section>
+
+        <section className="et-slide" id="tab-react">
           <Fade top>
             <h1>Projects</h1>
             <h3>TODO:</h3>
           </Fade>
         </section>
 
-        <section class="et-slide" id="tab-react">
+        <section className="et-slide" id="tab-angular">
           <Fade top>
-            <h1>Experience</h1>
-            <h3>TODO:</h3>
+            <h1>Other:</h1>
+            <p>
+              My current research focus is based on Algorithm design and implementation while being versitile in java and Python <br/>
+              A recent interest of mine has been GPU rendering and graphic design, from front-end all the way to Image reconstruction and rendering using ML. <br/>
+              I also enjoy photography and have years of experience using Photoshop and Lightroom. <br/>
+              In my spare time Im learning how to play the piano and production with Ableton. <br/>
+            </p>
           </Fade>
         </section>
-
-        <section class="et-slide" id="tab-angular">
-          <Fade top>
-            <h1>Other</h1>
-            <h3>TODO:</h3>
-          </Fade>
-        </section>
-        <section class="et-slide" id="tab-other">
+        <section className="et-slide" id="tab-other">
           <Fade top>
             <h1>Contact</h1>
-            <h3>TODO</h3>
+            <p>
+              Email me <a href="mailto:davidmickev@gmail.com">here </a> or visit any of the links above! <br/>
+              Thanks for visiting!</p>
           </Fade>
         </section>
 
-        <div class="mainfrog">
+        <div className="mainfrog">
           <svg viewBox="0 0 630 352" xmlns="http://www.w3.org/2000/svg">
             <mask id="m1">
-              <image class="m" href={svgAnim} y="-1" width="630" height="10620" />
+              <image className="m" href={svgAnim} y="-1" width="630" height="10620" />
             </mask>
             <mask id="m2">
-              <image class="m maskImg" href={svgAnim} y="-1" width="630" height="10620" />
+              <image className="m maskImg" href={svgAnim} y="-1" width="630" height="10620" />
             </mask>
             <image mask="url(#m2)" href={frog} width="630" height="420" />
             <g mask="url(#m1)">
-              <image class="frog" href={frog} width="630" height="420" />
+              <image className="frog" href={frog} width="630" height="420" />
             </g>
           </svg>
         </div>
@@ -169,6 +208,10 @@ function App() {
       </main>
 
     </div>
+    
+    
+    </body>
+    
   );
 }
 export default App;
