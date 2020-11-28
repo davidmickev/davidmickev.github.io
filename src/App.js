@@ -152,13 +152,18 @@ function App() {
 
         <section className="et-slide" id="tab-flexbox">
           <Fade top>
-            <h1>Skills</h1>
+            <h1>Skills and Coursework</h1>
             <h3>
-            •	LANGUAGES <br/>
+            •	LANGUAGES<br/>
               Python | Java | Scala | C/C++ | R | SQL 
               <br/><br/>
-            •	TECHNOLOGIES <br/>
+            •	TECHNOLOGIES<br/>
               Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt 
+              <br/><br/>
+            • RELEVANT COURSES<br/>
+              Algorithms | Data Structures | Machine Learning | Cloud Computing | Networking | Machine Organization | 
+              Computer Design | Systems Programming Software Design | Obj-Oriented Langs & Envs | Database Systems | Android Dev
+              
             </h3>
           </Fade>
         </section>
