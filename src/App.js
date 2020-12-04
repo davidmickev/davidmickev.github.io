@@ -66,15 +66,17 @@ function App() {
           <span id ="textlink">  Github </span>
         </button>
 
-        <button className="button" style={{ color: '#009900' }} onClick={() => {openInNewTab("mailto:davidmickev@gmail.com")}}>
-          <FontAwesomeIcon  size = "4x" icon={faMailchimp} />
-          <span id ="textlink"> Contact </span>
-        </button>
-        
         <button className="button" style={{ color: 'red' }} onClick={(saveFile)}  >
           <FontAwesomeIcon size = "4x" icon={faFilePdf}></FontAwesomeIcon>
           <span id ="textlink"> Resume </span>
         </button>
+
+        <button className="button" style={{ color: 'black' }} onClick={() => {openInNewTab("mailto:davidmickev@gmail.com")}}>
+          <FontAwesomeIcon  size = "4x" icon={faMailchimp} />
+          <span id ="textlink"> Contact </span>
+        </button>
+        
+        
       </div>
 
       
@@ -127,8 +129,8 @@ function App() {
 
         <div className="et-hero-tabs-container">
           <a className="et-hero-tab" href="#tab-es6">About</a>
-          <a className="et-hero-tab" href="#tab-flexbox">Projects</a>
-          <a className="et-hero-tab" href="#tab-react">Experience</a>
+          <a className="et-hero-tab" href="#tab-flexbox">Skills</a>
+          <a className="et-hero-tab" href="#tab-react">Projects</a>
           <a className="et-hero-tab" href="#tab-angular">Other</a>
           <a className="et-hero-tab" href="#tab-other">Contact</a>
           <span className="et-hero-tab-slider"></span>
@@ -152,32 +154,45 @@ function App() {
 
         <section className="et-slide" id="tab-flexbox">
           <Fade top>
-            <h1>Skills and Coursework</h1>
+            <h1>Skills and Coursework</h1><br/>
             <h3>
-            •	LANGUAGES<br/>
-              Python | Java | Scala | C/C++ | R | SQL 
-              <br/><br/>
-            •	TECHNOLOGIES<br/>
-              Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt 
-              <br/><br/>
-            • RELEVANT COURSES<br/>
-              Algorithms | Data Structures | Machine Learning | Cloud Computing | Networking | Machine Organization | 
-              Computer Design | Systems Programming Software Design | Obj-Oriented Langs & Envs | Database Systems | Android Dev
-              
+            • LANGUAGES •
             </h3>
+              <p>
+              Python | Java | Scala | C/C++ | R | SQL <br/>
+              English | Lithuanian
+              </p><br/><br/>
+            
+            <h3>
+            • TECHNOLOGIES •
+            </h3>
+              <p>
+              Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt 
+              </p><br/><br/>
+              
+            <h3>
+            • RELEVANT COURSES •
+            </h3>
+              <p>
+              Algorithms | Data Structures | Machine Learning | Cloud Computing | Networking <br/>
+              Machine Organization | Computer Design | Systems Programming Software Design <br/>
+              Obj-Oriented Langs & Envs | Database Systems | Android Development
+              </p>
           </Fade>
         </section>
 
         <section className="et-slide" id="tab-react">
           <Fade top>
             <h1>Projects</h1>
-            <h3>TODO:</h3>
+            <p>Currently working on implementing <a href="https://developer.github.com/v4/"> github-API</a> to display projects.<br/>
+            Otherwise, most projects are public or will be post graduation on<a href="https://github.com/davidmickev"> github </a>
+            </p>
           </Fade>
         </section>
 
         <section className="et-slide" id="tab-angular">
           <Fade top>
-            <h1>Other:</h1>
+            <h1>Other</h1>
             <p>
               My current research focus is based on Algorithm design and implementation while being versitile in java and Python <br/>
               A recent interest of mine has been GPU rendering and graphic design, from front-end all the way to Image reconstruction and rendering using ML. <br/>

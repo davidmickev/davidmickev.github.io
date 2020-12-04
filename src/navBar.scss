@@ -81,9 +81,14 @@ transition: left 0.3s ease;
   
 h1 {
     font-size: 3rem;
+    display: inline-block;
 }
 h3 {
     font-size: 12;
+    display: inline-block;
+    text-decoration: underline;
+    font-weight: bold;
+    font-weight: 900;
 }
 }
 .et-hero-tab {
