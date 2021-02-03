@@ -102,10 +102,14 @@ function App() {
               <span id="14" className="letter" style={{ color: randColor() }} >i</span>
               <span id="15" className="letter" style={{ color: randColor() }} >u</span>
               <span id="16" className="letter" style={{ color: randColor() }} >s</span>
+              <br></br>
 
-              <p>I'm a software engineer based in the Chicago ,IL.
-              <br/>I specializing in building and designing applications, implementing ideas, researching algorithms, and everything in between.
-              <br/>My desire is to create.</p>
+              <p>
+              I'm a software engineer from Chicago ,IL.
+              <br/>
+              My focus is in software engineering, Machine Learning, and Algorithm design.
+              <br/>
+              </p>
             </span>
           </div>
 
@@ -123,36 +127,35 @@ function App() {
               </ul>
             </div>
           </div>
-        
         </h1>
-        {/*<h3>hi</h3>*/}
-
+        
         <div className="et-hero-tabs-container">
-          <a className="et-hero-tab" href="#tab-es6">About</a>
-          <a className="et-hero-tab" href="#tab-flexbox">Skills</a>
-          <a className="et-hero-tab" href="#tab-react">Projects</a>
-          <a className="et-hero-tab" href="#tab-angular">Other</a>
-          <a className="et-hero-tab" href="#tab-other">Contact</a>
+          <a className="et-hero-tab" href="#tab-about">About</a>
+          <a className="et-hero-tab" href="#tab-skills">Skills</a>
+          <a className="et-hero-tab" href="#tab-projects">Projects</a>
+          <a className="et-hero-tab" href="#tab-other">Other</a>
+          <a className="et-hero-tab" href="#tab-contact">Contact</a>
           <span className="et-hero-tab-slider"></span>
         </div>
       </section>
 
       <main className="et-main">
-        <section className="et-slide" id="tab-es6">
+        <section className="et-slide" id="tab-about">
           <Fade top>
             <h1>About me</h1>
             <p>
             Hello! My name is David, a software engineer based in Chicago. <br/>
-            I enjoy creation and implementation of ideas; My focus is designing applications, creation and implementation of algorithms and everything in between. <br/>
-            My goal and focus is producing scalable code and technologies that meet modern space and time complexity associated with computation. <br/>
-            I am researching algorithmic implementations and application design. <br/>
+            My focus is designing applications, implementation of algorithms and ML within Data Science in generating adverse models. <br/>
+            My goal and focus is producing scalable code and technologies that meet modern space and time complexity associated with modern problems. <br/>
+            I am researching algorithmic implementations, image synthesis with GAN and application design, more info <a href="#tab-other">here</a> <br/>
             Graduating from University of Illinois in Chicago Spring 2021 BS in Computer Science and Math. <br/>
-            Below are the tools and technologies I enjoy and have experience with <br/>
+            Below are the tools and technologies I enjoy and have experience with. <br/>
+            <br></br>
             </p>
           </Fade>
         </section>
 
-        <section className="et-slide" id="tab-flexbox">
+        <section className="et-slide" id="tab-skills">
           <Fade top>
             <h1>Skills and Coursework</h1><br/>
             <h3>
@@ -181,7 +184,7 @@ function App() {
           </Fade>
         </section>
 
-        <section className="et-slide" id="tab-react">
+        <section className="et-slide" id="tab-projects">
           <Fade top>
             <h1>Projects</h1>
             <p>Currently working on implementing <a href="https://developer.github.com/v4/"> github-API</a> to display projects.<br/>
@@ -190,18 +193,26 @@ function App() {
           </Fade>
         </section>
 
-        <section className="et-slide" id="tab-angular">
+        <section className="et-slide" id="tab-other">
           <Fade top>
             <h1>Other</h1>
             <p>
-              My current research focus is based on Algorithm design and implementation while being versitile in java and Python <br/>
-              A recent interest of mine has been GPU rendering and graphic design, from front-end all the way to Image reconstruction and rendering using ML. <br/>
+              Majority of my time spent is on Algorithm design and implementation while being versitile in Java, Scala and Python <br/>
+              A recent interest of mine has been GPU rendering and graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
               I also enjoy photography and have years of experience using Photoshop and Lightroom. <br/>
-              In my spare time Im learning how to play the piano and production with Ableton. <br/>
+              In my spare time I'm learning how to play the piano exploring tools such as Ableton. <br/>
             </p>
+            <br/><br/>
+            <h1>Research</h1>
+            <p>
+            Currently I'm doing undergraduate research that focuses on image classifications dense zones. <br></br>
+            My goal is to generate and manipulate adverse training data utilizing Generative Adversarial Networks (GAN) to improve accuracy within models and explore multilabel classifications.
+            <br></br>
+            </p>
+
           </Fade>
         </section>
-        <section className="et-slide" id="tab-other">
+        <section className="et-slide" id="tab-contact">
           <Fade top>
             <h1>Contact</h1>
             <p>
