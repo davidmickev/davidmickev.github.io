@@ -145,10 +145,10 @@ function App() {
             <h1>About me</h1>
             <p>
             Hello! My name is David, a software engineer based in Chicago. <br/>
-            My focus is designing applications, implementation of algorithms and ML within Data Science in generating adverse models. <br/>
-            My goal and focus is producing scalable code and technologies that meet modern space and time complexity associated with modern problems. <br/>
-            I am researching algorithmic implementations, image synthesis with GAN and application design, more info <a href="#tab-other">here</a> <br/>
-            Graduating from University of Illinois in Chicago Spring 2021 BS in Computer Science and Math. <br/>
+            My focus is designing applications, implementation of algorithms and ML within Data Science in generating adverse models with visualization. <br/>
+            My current practice involves producing scalable code and technologies that implement fullstack design and explore functionalities of different frameworks. <br/>
+            Performed research for Algorithm design, and image synthesis with GAN and application design in Computer Graphics, more info <a href="#tab-other">here</a> <br/>
+            Graduated from University of Illinois in Chicago May 2021 BS in Computer Science and Math. <br/>
             Below are the tools and technologies I enjoy and have experience with. <br/>
             <br></br>
             </p>
@@ -170,7 +170,8 @@ function App() {
             • TECHNOLOGIES •
             </h3>
               <p>
-              Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt 
+              Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt <br/>
+              Node | React | Spring
               </p><br/><br/>
               
             <h3>
@@ -179,7 +180,7 @@ function App() {
               <p>
               Algorithms | Data Structures | Machine Learning | Cloud Computing | Networking <br/>
               Machine Organization | Computer Design | Systems Programming Software Design <br/>
-              Obj-Oriented Langs & Envs | Database Systems | Android Development
+              Obj-Oriented Langs & Envs | Database Systems | Android Development | Computer Graphics
               </p>
           </Fade>
         </section>
@@ -197,14 +198,16 @@ function App() {
           <Fade top>
             <h1>Other</h1>
             <p>
-              Majority of my time spent is on Algorithm design and implementation while being versitile in Java, Scala and Python <br/>
-              A recent interest of mine has been GPU rendering and graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
+              Majority of my time spent is on Algorithm design, developing technical analasys tools and calculations for trading while being versitile in Java, Scala and Python <br/>
+              My recent research involved graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
+              This recent work has inspired me to take the path of implementing visualization for big data and trading technologies.
               I also enjoy photography and have years of experience using Photoshop and Lightroom. <br/>
               In my spare time I'm learning how to play the piano exploring tools such as Ableton. <br/>
             </p>
             <br/><br/>
             <h1>Research</h1>
             <p>
+            Research Fall 2020 for algorithm design and implementation of synthesis tree of gates. (document) <br/>
             Currently I'm doing undergraduate research that focuses on image classifications dense zones. <br></br>
             My goal is to generate and manipulate adverse training data utilizing Generative Adversarial Networks (GAN) to improve accuracy within models and explore multilabel classifications.
             <br></br>
