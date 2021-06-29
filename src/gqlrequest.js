@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 // import your GITHUB_TOKEN from another file(keep private).
-import secret_token from './GH_T.js';
+import secret_token from './config.js';
 
 console.log(secret_token);
 
