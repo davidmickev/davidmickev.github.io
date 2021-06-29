@@ -38,8 +38,6 @@ cursor: pointer;
 color: black;
 `
 
-
-
 const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
   if (newWindow) newWindow.opener = null
@@ -51,23 +49,6 @@ const saveFile = () => {
     "Deividas Mickevicius Resume.pdf"
   );
 };
-
-var { graphql, buildSchema } = require('graphql');
-
-var schema = buildSchema(`
-  type Query {
-    hello: String
-  }
-`
-
-);
- 
-var root = { hello: () => 'Hello world!' };
-console.log(root);
- 
-graphql(schema, '{ hello }', root).then((response) => {
-  console.log(response);
-});
 
 function App() {
   return (
