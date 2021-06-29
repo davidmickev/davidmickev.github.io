@@ -38,6 +38,8 @@ cursor: pointer;
 color: black;
 `
 
+
+
 const openInNewTab = (url) => {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
   if (newWindow) newWindow.opener = null
@@ -49,6 +51,23 @@ const saveFile = () => {
     "Deividas Mickevicius Resume.pdf"
   );
 };
+
+var { graphql, buildSchema } = require('graphql');
+
+var schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`
+
+);
+ 
+var root = { hello: () => 'Hello world!' };
+console.log(root);
+ 
+graphql(schema, '{ hello }', root).then((response) => {
+  console.log(response);
+});
 
 function App() {
   return (
@@ -75,11 +94,8 @@ function App() {
           <FontAwesomeIcon  size = "4x" icon={faMailchimp} />
           <span id ="textlink"> Contact </span>
         </button>
-        
-        
       </div>
 
-      
       <section className="et-hero-tabs" data-image-source="./icons/dmlogo.png">
         <h1>
           <div id="name">
@@ -191,6 +207,7 @@ function App() {
             <p>Currently working on implementing <a href="https://developer.github.com/v4/"> github-API</a> to display projects.<br/>
             Otherwise, most projects are public or will be post graduation on<a href="https://github.com/davidmickev"> github </a>
             </p>
+            
           </Fade>
         </section>
 
