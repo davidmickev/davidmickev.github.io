@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b7d47498.chunk.css",
+    "main.js": "/static/js/main.44321141.chunk.js",
+    "main.js.map": "/static/js/main.44321141.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
+    "static/js/2.821104d1.chunk.js": "/static/js/2.821104d1.chunk.js",
+    "static/js/2.821104d1.chunk.js.map": "/static/js/2.821104d1.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f4dbefebc5e7e8ca1b3e9c193b19997f.js": "/precache-manifest.f4dbefebc5e7e8ca1b3e9c193b19997f.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.b7d47498.chunk.css.map": "/static/css/main.b7d47498.chunk.css.map",
+    "static/js/2.821104d1.chunk.js.LICENSE.txt": "/static/js/2.821104d1.chunk.js.LICENSE.txt",
+    "static/media/froggy.jpg": "/static/media/froggy.06d9d96d.jpg",
+    "static/media/liquidMask1.svg": "/static/media/liquidMask1.1040b972.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83c3e0c4.js",
+    "static/js/2.821104d1.chunk.js",
+    "static/css/main.b7d47498.chunk.css",
+    "static/js/main.44321141.chunk.js"
+  ]
+}
