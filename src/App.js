@@ -18,9 +18,18 @@ import { saveAs } from 'file-saver';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {library} from '@fortawesome/fontawesome-svg-core'
 
+// // Projects (reactstrap) Jumbotrons
+// import { Jumbotron, Button } from 'reactstrap';
+// import PropTypes from 'prop-types'
+import Example from "./projects.js"
+
+
 import { faGithub , faLinkedin ,faMailchimp } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
-library.add(faGithub,faLinkedin,faMailchimp,faFilePdf)
+library.add(faGithub,faLinkedin,faMailchimp,faFilePdf);
+
+
+
 
 export const Icon = styled.div
   `width: 9ch;
@@ -187,10 +196,18 @@ function App() {
             <h1>Projects</h1>
             <p>Currently working on implementing <a href="https://developer.github.com/v4/"> github-API</a> to display projects.<br/>
             Otherwise, most projects are public or will be post graduation on<a href="https://github.com/davidmickev"> github </a>
+            
+
             </p>
+
+            
             
           </Fade>
         </section>
+
+        <Example></Example>
+
+        
 
         <section className="et-slide" id="tab-other">
           <Fade top>
