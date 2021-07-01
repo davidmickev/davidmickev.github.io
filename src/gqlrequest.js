@@ -1,11 +1,11 @@
 import fetch from 'node-fetch';
 
 // import your GITHUB_TOKEN from another file(keep private).
-import secret_token from './config.js';
+import {secret_token,secret_token2} from './config.js';
 // console.log(secret_token);
 
 const variables = {
-	githubToken: secret_token,
+	githubToken: secret_token+secret_token2,
 	githubLogin: 'davidmickev',
 	//reposToFetch: 20
 
