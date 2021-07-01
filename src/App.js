@@ -23,13 +23,17 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 // import PropTypes from 'prop-types'
 import Example from "./projects.js"
 
+// gql query
+import githubData from "./gqlrequest.js"
+// display map (key,value=>)
+import * as gqlr from "./displayProjects.js"
 
 import { faGithub , faLinkedin ,faMailchimp } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 library.add(faGithub,faLinkedin,faMailchimp,faFilePdf);
 
 
-
+console.log(githubData)
 
 export const Icon = styled.div
   `width: 9ch;
@@ -58,6 +62,30 @@ const saveFile = () => {
     "Deividas Mickevicius Resume.pdf"
   );
 };
+
+
+
+
+
+// function ListItem(props) {
+//   //There is no need to specify the key here:
+//   return <li>{props.value}</li>;
+// }
+
+// function NumberList(props) {
+//   const numbers = props.numbers;
+//   const listItems = numbers.map((number) =>
+//     // Correct! Key should be specified inside the array.
+//     <ListItem key={number.toString()} value={number} />
+//   );
+//   return (
+//     <ul>
+//       {listItems}
+//     </ul>
+//   );
+// }
+
+const numbers = [1, 2, 3, 4, 5];
 
 function App() {
   return (
@@ -113,7 +141,7 @@ function App() {
               <p>
               I'm a software engineer from Chicago ,IL.
               <br/>
-              My focus is in software engineering, Machine Learning, and Algorithm design.
+              My focus is in Software Engineering, Algorithm design and Machine Learning.
               <br/>
               </p>
             </span>
@@ -205,7 +233,12 @@ function App() {
           </Fade>
         </section>
 
-        {/* <Example></Example> */}
+        {/* <Example></Example>
+
+        
+
+    <gqlr.NumberList numbers={numbers} /> */}
+  
 
         
 

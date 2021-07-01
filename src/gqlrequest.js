@@ -54,7 +54,7 @@ const headers = {
 	Authorization: "bearer " + variables.githubToken
 };
 
-let githubData = await(async () => { 
+let githubData = (async () => { 
 	const response = await fetch(url, {
 		method: 'POST',
 		body: JSON.stringify(queryRepo),
