@@ -21,7 +21,7 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 // // Projects (reactstrap) Jumbotrons
 // import { Jumbotron, Button } from 'reactstrap';
 // import PropTypes from 'prop-types'
-import Example from "./projects.js"
+// import Example from "./projects.js"
 
 // gql query
 // import githubData from "./gqlrequest.js"
