@@ -4,7 +4,7 @@ import pprint
 
 url = 'https://api.github.com/graphql'
 json = { 'query' : '{ viewer { repositories(first: 100, privacy: PUBLIC, ownerAffiliations: OWNER) { totalCount pageInfo { hasNextPage endCursor } edges { node { name description url} } } } }' }
-api_token = "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"
+api_token = "YOURSECRET_TOKEN"
 headers = {'Authorization': 'token %s' % api_token}
 
 r = requests.post(url=url, json=json, headers=headers)

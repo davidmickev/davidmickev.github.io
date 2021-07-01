@@ -205,7 +205,7 @@ function App() {
           </Fade>
         </section>
 
-        <Example></Example>
+        {/* <Example></Example> */}
 
         
 
