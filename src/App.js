@@ -24,16 +24,17 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 import Example from "./projects.js"
 
 // gql query
-import githubData from "./gqlrequest.js"
-// display map (key,value=>)
-import * as gqlr from "./displayProjects.js"
+// import githubData from "./gqlrequest.js"
+// console.log(githubData);
+
+// // display map (key,value=>)
+// import * as gqlr from "./displayProjects.js"
 
 import { faGithub , faLinkedin ,faMailchimp } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 library.add(faGithub,faLinkedin,faMailchimp,faFilePdf);
 
 
-console.log(githubData)
 
 export const Icon = styled.div
   `width: 9ch;
@@ -85,7 +86,7 @@ const saveFile = () => {
 //   );
 // }
 
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
 function App() {
   return (
