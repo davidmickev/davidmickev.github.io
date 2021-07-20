@@ -10,6 +10,7 @@ import gsap from 'gsap';
 
 
 ReactDOM.render(
+
   <React.StrictMode>
     <App />
   </React.StrictMode>,

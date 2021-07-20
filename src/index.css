@@ -24,7 +24,6 @@ body {
   font-family: monospace;
   width: 100%;
   position:absolute;
-  
 }
 
 p {
@@ -37,20 +36,16 @@ p {
 
 
 #links {
+  z-index: 1;
   background-color: transparent;
-  /* font-size: 20px;
-  margin-top: 0px;
-  margin-right: 0px;
-  text-align: right;
-  background-color: #fff; */
-
   position: relative;
   top: 0px;
   flex-direction: column;
   align-items: absolute;
   display: block;
   padding: 20px 0;
-  float: 'right'
+  float: 'right',
+  
 }
 
 button {
@@ -76,8 +71,8 @@ button {
 }
 
 #name {
-  margin-top: -300px;
-  margin-bottom: 30px;
+  margin-top: -15%;
+  margin-bottom: 25%;
   background-image: './icons/dmlogo.png';
 }
 

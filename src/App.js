@@ -1,40 +1,23 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
 import './App.css';
-import './loader.scss';
-
 // Rand color interaction with header
 import randColor from './headerStyle';
-import styled from 'styled-components';
-
 // Froggy footer
-import svgAnim from './images/liquidMask1.svg';
 import frog from './images/froggy.jpg';
-
+import svgAnim from './images/liquidMask1.svg';
+import './loader.scss';
+// GQL4 query and display
+import Ghdata from './displayCards.js';
 // Saving resume PDF
 import { saveAs } from 'file-saver';
-
 // Icons for socials using fortawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {library} from '@fortawesome/fontawesome-svg-core'
-
-// // Projects (reactstrap) Jumbotrons
-// import { Jumbotron, Button } from 'reactstrap';
-// import PropTypes from 'prop-types'
-// import Example from "./projects.js"
-
-// gql query
-// import githubData from "./gqlrequest.js"
-// console.log(githubData);
-
-// // display map (key,value=>)
-// import * as gqlr from "./displayProjects.js"
-
-import { faGithub , faLinkedin ,faMailchimp } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faGithub, faLinkedin, faMailchimp } from '@fortawesome/free-brands-svg-icons';
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 library.add(faGithub,faLinkedin,faMailchimp,faFilePdf);
-
-
 
 export const Icon = styled.div
   `width: 9ch;
@@ -64,33 +47,9 @@ const saveFile = () => {
   );
 };
 
-
-
-
-
-// function ListItem(props) {
-//   //There is no need to specify the key here:
-//   return <li>{props.value}</li>;
-// }
-
-// function NumberList(props) {
-//   const numbers = props.numbers;
-//   const listItems = numbers.map((number) =>
-//     // Correct! Key should be specified inside the array.
-//     <ListItem key={number.toString()} value={number} />
-//   );
-//   return (
-//     <ul>
-//       {listItems}
-//     </ul>
-//   );
-// }
-
-// const numbers = [1, 2, 3, 4, 5];
-
 function App() {
+  
   return (
-    
     <body>
     <div className="App">
       <div id="links">
@@ -150,10 +109,7 @@ function App() {
 
           <div className="content">
             <div className="content__container">
-              <p className="content__container__text">
-                Hello
-                </p>
-
+              <p className="content__container__text"> Hello </p>
               <ul className="content__container__list">
                 <li className="content__container__list__item">creators</li>
                 <li className="content__container__list__item">developers</li>
@@ -164,6 +120,7 @@ function App() {
           </div>
         </h1>
         
+
         <div className="et-hero-tabs-container">
           <a className="et-hero-tab" href="#tab-about">About</a>
           <a className="et-hero-tab" href="#tab-skills">Skills</a>
@@ -172,12 +129,15 @@ function App() {
           <a className="et-hero-tab" href="#tab-contact">Contact</a>
           <span className="et-hero-tab-slider"></span>
         </div>
+        <br></br>
       </section>
 
       <main className="et-main">
         <section className="et-slide" id="tab-about">
           <Fade top>
+            <div>
             <h1>About me</h1>
+            <br/>
             <p>
             Hello! My name is David, a software engineer based in Chicago. <br/>
             My focus is designing applications, implementation of algorithms and ML within Data Science in generating adverse models with visualization. <br/>
@@ -187,19 +147,26 @@ function App() {
             Below are the tools and technologies I enjoy and have experience with. <br/>
             <br></br>
             </p>
+            </div>
           </Fade>
         </section>
 
         <section className="et-slide" id="tab-skills">
           <Fade top>
-            <h1>Skills and Coursework</h1><br/>
+            <div>
+
+              <h1>Skills and Coursework</h1>
+                <br/>
+
             <h3>
             • LANGUAGES •
+              
             </h3>
               <p>
-              Python | Java | Scala | C/C++ | R | SQL <br/>
+              <br/>
+              Python | Java | Scala | C/C++ | R | SQL 
               English | Lithuanian
-              </p><br/><br/>
+              </p>
             
             <h3>
             • TECHNOLOGIES •
@@ -207,44 +174,40 @@ function App() {
               <p>
               Akka | Git | Docker | Linux | Unix | Jupyter | Gradle | Maven | sbt <br/>
               Node | React | Spring
-              </p><br/><br/>
+              </p>
               
             <h3>
             • RELEVANT COURSES •
             </h3>
               <p>
-              Algorithms | Data Structures | Machine Learning | Cloud Computing | Networking <br/>
-              Machine Organization | Computer Design | Systems Programming Software Design <br/>
+              Algorithms | Data Structures | Machine Learning | Cloud Computing | Networking 
+              Machine Organization | Computer Design | Systems Programming Software Design 
               Obj-Oriented Langs & Envs | Database Systems | Android Development | Computer Graphics
               </p>
+              </div>
           </Fade>
         </section>
-
+        
         <section className="et-slide" id="tab-projects">
           <Fade top>
+            <div>
             <h1>Projects</h1>
-            <p>Currently working on implementing <a href="https://developer.github.com/v4/"> github-API</a> to display projects.<br/>
-            Otherwise, most projects are public or will be post graduation on<a href="https://github.com/davidmickev"> github </a>
-            
-
+            <br/>
+            <p>
+              GQL v4 to display
+              <a href="https://github.com/davidmickev"> github </a> projects
             </p>
-
-            
-            
+            </div>
           </Fade>
         </section>
 
-        {/* <Example></Example>
-
-        
-
-    <gqlr.NumberList numbers={numbers} /> */}
-  
-
-        
+        <div>
+          <Ghdata />
+        </div>
 
         <section className="et-slide" id="tab-other">
           <Fade top>
+            <div>
             <h1>Other</h1>
             <p>
               Majority of my time spent is on Algorithm design, developing technical analasys tools and calculations for trading while being versitile in Java, Scala and Python <br/>
@@ -254,13 +217,17 @@ function App() {
               In my spare time I'm learning how to play the piano exploring tools such as Ableton. <br/>
             </p>
             <br/><br/>
+            </div>
+            <div>
+            <br/><br/>
             <h1>Research</h1>
             <p>
             Research Fall 2020 for algorithm design and implementation of synthesis tree of gates. (document) <br/>
             Currently I'm doing undergraduate research that focuses on image classifications dense zones. <br></br>
             My goal is to generate and manipulate adverse training data utilizing Generative Adversarial Networks (GAN) to improve accuracy within models and explore multilabel classifications.
-            <br></br>
+            <br/><br/>
             </p>
+            </div>
 
           </Fade>
         </section>
