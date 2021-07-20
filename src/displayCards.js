@@ -1,12 +1,11 @@
 import githubData from "./gqlrequest";
 import {
-    Card, CardImg, CardText, CardBody,
+    Card, CardBody,
     CardTitle, CardSubtitle, Button, Row, Col
 } from 'reactstrap';
 
 import React from "react";
 import './cards.scss';
-import { Styleshare } from "styled-icons/simple-icons";
 
 class Ghdata extends React.Component {
 
@@ -35,9 +34,7 @@ class Ghdata extends React.Component {
         return (
             <div className = "grid">
                     {/* {console.log(this.state.cards)} */}
-                    
                     {this.state.cards.map((cards, index) =>
-                    
                         <Card className={cards.card} key={index} >
                             {console.log(this.state.cards[index].languages.nodes.slice(0,3))}
                             <CardTitle onClick={() => { openInNewTab(cards.url) }} tag = "h5" >{cards.name} </CardTitle>
