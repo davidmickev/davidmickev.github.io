@@ -1,14 +1,13 @@
 import githubData from "./gqlrequest";
 import {
     Card, CardBody,
-    CardTitle, CardSubtitle, Button, Row, Col
-} from 'reactstrap';
+    CardTitle, CardSubtitle, Button } 
+    from 'reactstrap';
 
 import React from "react";
 import './cards.scss';
 
 class Ghdata extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {
