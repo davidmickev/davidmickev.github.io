@@ -1,4 +1,3 @@
-var secret_token = "ghp_4QSdigMfLi2WpTv";
-var secret_token2 = "ym53AsNJAOmR5hO2Kml5O";
+var secret_token = "YOUR SECRET TOKEN FROM GITHUB";
 
-export {secret_token,secret_token2};
+export {secret_token};

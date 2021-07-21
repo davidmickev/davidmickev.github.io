@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 // import your GITHUB_TOKEN from another file(keep private).
-import {secret_token,secret_token2} from './config.js';
+import secret_token from './config.js';
 
 // const queryRepo = {
 // 	query: `
@@ -30,7 +30,7 @@ import {secret_token,secret_token2} from './config.js';
 //           name
 
 const variables = {
-	githubToken: secret_token+secret_token2,
+	githubToken: secret_token,
 	githubLogin: 'davidmickev',
 	//reposToFetch: 20
 
@@ -78,7 +78,7 @@ export const githubData = (async () => {
 	const json = await response.json();
 
 //console.log(json.data.viewer.repositories.nodes);
-  return json.data.viewer.repositories.nodes;
+  return json;//.data.viewer.repositories.nodes;
 })();
 
 export default githubData;
