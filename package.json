@@ -22,7 +22,7 @@
     "gsap": "^3.7.0",
     "jquery": "^3.6.0",
     "node": "^16.4.0",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^3.1.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-download-link": "^2.3.0",
