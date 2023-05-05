@@ -1,4 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Quick tutorial if you want to build similar project
+### (Project Setup) :
+
+## 1) Create a repository named (my-app) using create-react-app.
+
+# npm init react-app my-app
+
+## 2) Install GitHub Pages package as a dev-dependency.
+
+# cd my-app
+# npm install gh-pages --save-dev
+
+## 3) Add properties to package.json file.
+
+Property required: "http://{username}.github.io/{repo-name}" {username} GH username, and {repo-name} GH repository you created it will look like this :
+
+"homepage": "https://davidmickev.github.io/"
+
+Second in the existing scripts property we to need to add predeploy and deploy.
+
+"scripts": {
+//...
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+}
 
 ## Recommended Scripts if Using my project template.
 ### `npm install`

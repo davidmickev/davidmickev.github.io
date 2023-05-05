@@ -49,7 +49,7 @@ class Ghdata extends React.Component {
                             <CardBody>
                                 <CardSubtitle className="mb-2 text-muted">{cards.description}</CardSubtitle>
                                 <CardText>{cards.language}</CardText>
-                                <Button class="btn btn-secondary" onClick={() => { openInNewTab(cards.url) }}>Visit Project </Button>
+                                <Button class="btn btn-secondary" onClick={() => { openInNewTab(cards.html_url) }}>Visit Project </Button>
                             </CardBody>
                         </Card>
                     )}

@@ -2,7 +2,7 @@
   "homepage": "https://davidmickev.github.io/",
   "name": "my-app",
   "version": "0.1.0",
-  "type": "module",
+  "type": "",
   "private": false,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
@@ -28,7 +28,7 @@
     "react-download-link": "^2.3.0",
     "react-promise": "^3.0.2",
     "react-reveal": "^1.2.2",
-    "react-scripts": "^3.4.4",
+    "react-scripts": "^5.0.1",
     "reactstrap": "^8.9.0",
     "sass": "^1.35.1",
     "sass-loader": "^12.1.0",
