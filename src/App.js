@@ -101,7 +101,7 @@ function App() {
               <p>
               I'm a software engineer from Chicago ,IL.
               <br/>
-              My focus is in Software Engineering, Algorithm design and Machine Learning.
+              My passion is Software Engineering, Algorithm design and Machine Learning.
               <br/>
               </p>
             </span>
@@ -111,9 +111,9 @@ function App() {
             <div className="content__container">
               <p className="content__container__text"> Hello </p>
               <ul className="content__container__list">
-                <li className="content__container__list__item">creators</li>
                 <li className="content__container__list__item">developers</li>
-                <li className="content__container__list__item">designers</li>
+                <li className="content__container__list__item">creators</li>
+                <li className="content__container__list__item">engineers</li>
                 <li className="content__container__list__item">everybody!</li>
               </ul>
             </div>
@@ -211,7 +211,7 @@ function App() {
             <h1>Other</h1>
             <p>
               Majority of my time spent is on Algorithm design, developing technical analasys tools and calculations for trading while being versitile in Java, Scala and Python <br/>
-              My recent research involved graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
+              My previous research involved algorithms and graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
               This recent work has inspired me to take the path of implementing visualization for big data and trading technologies.
               I also enjoy photography and have years of experience using Photoshop and Lightroom. <br/>
               In my spare time I'm learning how to play the piano exploring tools such as Ableton. <br/>
@@ -222,9 +222,10 @@ function App() {
             <br/><br/>
             <h1>Research</h1>
             <p>
-            Research Fall 2020 for algorithm design and implementation of synthesis tree of gates. (document) <br/>
-            Currently I'm doing undergraduate research that focuses on image classifications dense zones. <br></br>
-            My goal is to generate and manipulate adverse training data utilizing Generative Adversarial Networks (GAN) to improve accuracy within models and explore multilabel classifications.
+            Research Fall 2020 for algorithm design and implementation of synthesis tree of gates. <br/>
+            Undergraduate research that focuses on image classifications dense zones. <br></br>
+            Generated and manipulate adverse training data utilizing Generative Adversarial Networks (GAN) to improve accuracy within models and explore multilabel classifications.
+            Current research revolves collecting and creating visualization data and statistics for market strategies and trends within stocks and crypto.
             <br/><br/>
             </p>
             </div>

@@ -41,7 +41,7 @@ class Ghdata extends React.Component {
 
         return (
             <div className = "grid">
-                    {/* {console.log(this.state.cards)} */}
+                    {/* {console.log(this.state.cards)} can test branching with the console.log or cards.url*/} 
                     {this.state.cards.map((cards, index) =>
                         <Card className={cards.card} key={index} >
                             <CardTitle onClick={() => { openInNewTab(cards.html_url) }} tag = "h5" >{cards.name} </CardTitle>

@@ -3,12 +3,12 @@
 
 ### 1) Create a repository named (my-app) using create-react-app.
 
-## npm init react-app my-app
+##### npm init react-app my-app
 
 ### 2) Install GitHub Pages package as a dev-dependency.
 
-## cd my-app
-## npm install gh-pages --save-dev
+#### cd my-app
+#### npm install gh-pages --save-dev
 
 ### 3) Add properties to package.json file.
 
