@@ -1,30 +1,31 @@
 ## Quick tutorial if you want to build similar project
 ### (Project Setup) :
 
-## 1) Create a repository named (my-app) using create-react-app.
+### 1) Create a repository named (my-app) using create-react-app.
 
-# npm init react-app my-app
+## npm init react-app my-app
 
-## 2) Install GitHub Pages package as a dev-dependency.
+### 2) Install GitHub Pages package as a dev-dependency.
 
-# cd my-app
-# npm install gh-pages --save-dev
+## cd my-app
+## npm install gh-pages --save-dev
 
-## 3) Add properties to package.json file.
+### 3) Add properties to package.json file.
 
-Property required: "http://{username}.github.io/{repo-name}" {username} GH username, and {repo-name} GH repository you created it will look like this :
+## Property required: "http://{username}.github.io/{repo-name}" {username} GH username, and {repo-name} GH repository you created it will look like this :
+## "homepage": "https://davidmickev.github.io/"
 
-"homepage": "https://davidmickev.github.io/"
+### Second in the existing scripts property we to need to add predeploy and deploy.
+## Copy my deploy-gh-pages.yml and package.json
+## init repository, add remote to your github origin
 
-Second in the existing scripts property we to need to add predeploy and deploy.
+### Last step npm run deploy
 
-"scripts": {
-//...
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-}
+## ISSUES:
+### Usual issues when downloading this template or others can be solved by npm upgrade install or by removing node_modules and package-lock.json and the npm install again.
+### Node is well documented for any errors outside of this scope please resort to docs or internet
 
-## Recommended Scripts if Using my project template.
+## Recommended default Scripts if Using my project template.
 ### `npm install`
 ### `npm update`
 ### `npm run build`
