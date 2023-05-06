@@ -241,7 +241,7 @@ function App() {
           </Fade>
         </section>
 
-        <div className="mainfrog">
+        {/* <div className="mainfrog">
           <svg viewBox="0 0 630 352" xmlns="http://www.w3.org/2000/svg">
             <mask id="m1">
               <image className="m" href={svgAnim} y="-1" width="630" height="10620" />
@@ -254,7 +254,7 @@ function App() {
               <image className="frog" href={frog} width="630" height="420" />
             </g>
           </svg>
-        </div>
+        </div> */}
 
       </main>
 
