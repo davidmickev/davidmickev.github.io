@@ -208,18 +208,6 @@ function App() {
         <section className="et-slide" id="tab-other">
           <Fade top>
             <div>
-            <h1>Other</h1>
-            <p>
-              Majority of my time spent is on Algorithm design, developing technical analasys tools and calculations for trading while being versitile in Java, Scala and Python <br/>
-              My previous research involved algorithms and graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
-              This recent work has inspired me to take the path of implementing visualization for big data and trading technologies.
-              I also enjoy photography and have years of experience using Photoshop and Lightroom. <br/>
-              In my spare time I'm learning how to play the piano exploring tools such as Ableton. <br/>
-            </p>
-            <br/><br/>
-            </div>
-            <div>
-            <br/><br/>
             <h1>Research</h1>
             <p>
             Research Fall 2020 for algorithm design and implementation of synthesis tree of gates. <br/>
@@ -228,6 +216,20 @@ function App() {
             Current research revolves collecting and creating visualization data and statistics for market strategies and trends within stocks and crypto.
             <br/><br/>
             </p>
+            
+            <br/><br/>
+            </div>
+            <div>
+            <br/><br/>
+            <h1>Other</h1>
+            <p>
+              Majority of my time spent is on Algorithm design, developing technical analasys tools and calculations for trading while being versitile in Java, Scala and Python <br/>
+              My previous research involved algorithms and graphic design, from front-end, Web-GL, all the way to Image reconstruction and rendering using ML. <br/>
+              This recent work has inspired me to take the path of implementing visualization for big data and trading technologies.
+              I also enjoy photography and have years of experience using Photoshop and Lightroom. <br/>
+              In my spare time I'm learning how to play the piano exploring tools such as Ableton. <br/>
+            </p>
+            
             </div>
 
           </Fade>
@@ -241,7 +243,7 @@ function App() {
           </Fade>
         </section>
 
-        {/* <div className="mainfrog">
+        <div className="mainfrog">
           <svg viewBox="0 0 630 352" xmlns="http://www.w3.org/2000/svg">
             <mask id="m1">
               <image className="m" href={svgAnim} y="-1" width="630" height="10620" />
@@ -254,15 +256,11 @@ function App() {
               <image className="frog" href={frog} width="630" height="420" />
             </g>
           </svg>
-        </div> */}
+        </div>
 
       </main>
-
     </div>
-    
-    
     </body>
-    
   );
 }
 export default App;
