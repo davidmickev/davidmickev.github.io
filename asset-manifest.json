@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.10150a64.css",
+    "main.js": "/static/js/main.d428524b.js",
+    "static/media/liquidMask1.svg": "/static/media/liquidMask1.d83416973330f9cc2065fd8db4ca297d.svg",
+    "static/media/froggy.jpg": "/static/media/froggy.ea643754ada43d448e97.jpg",
+    "index.html": "/index.html",
+    "main.10150a64.css.map": "/static/css/main.10150a64.css.map",
+    "main.d428524b.js.map": "/static/js/main.d428524b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10150a64.css",
+    "static/js/main.d428524b.js"
+  ]
+}
