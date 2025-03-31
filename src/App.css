@@ -40,4 +40,23 @@
   }
 }
 
+/*hover effect for header contact*/
+.icon-hover {
+  transition: transform 0.3s ease-in-out;
+}
 
+.icon-hover:hover {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}

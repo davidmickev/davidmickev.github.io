@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client'; // Use createRoot from React 18+
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
@@ -8,37 +8,35 @@ import $ from 'jquery';
 import './navBar.scss';
 import gsap from 'gsap';
 
-
-ReactDOM.render(
-
+// Create a root and render the app
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
+// The rest of your code remains unchanged
 function getScrollTop() {
-    if (typeof window.pageYOffset !== "undefined" ) {
-        // Most browsers
-        return window.pageYOffset;
-    }
-    var d = document.documentElement;
-    if (typeof d.clientHeight !== "undefined") {
-        // IE in standards mode
-        return d.scrollTop;
-    }
-    // IE in quirks mode
-    return document.body.scrollTop;
+  if (typeof window.pageYOffset !== "undefined") {
+    return window.pageYOffset;
+  }
+  var d = document.documentElement;
+  if (typeof d.clientHeight !== "undefined") {
+    return d.scrollTop;
+  }
+  return document.body.scrollTop;
 }
 
-window.onscroll = function() {
+// Your existing code for scroll and animations...
+window.onscroll = function () {
   var box = document.getElementById("links");
   var scroll = getScrollTop();
 
   if (scroll <= window.innerHeight) {
-      box.style.top = "000px";
+    box.style.top = "000px";
   } else {
-      box.style.top = (scroll + 2) + 100 +"px";
+    box.style.top = (scroll + 2) + 100 + "px";
   }
 };
 

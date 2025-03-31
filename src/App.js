@@ -1,5 +1,6 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
+import { motion } from 'framer-motion';
+
 import styled from 'styled-components';
 import './App.css';
 // Rand color interaction with header
@@ -15,9 +16,10 @@ import { saveAs } from 'file-saver';
 // Icons for socials using fortawesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGithub, faLinkedin, faMailchimp } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
-library.add(faGithub,faLinkedin,faMailchimp,faFilePdf);
+library.add(faGithub,faLinkedin,faFilePdf,faEnvelope);
 
 export const Icon = styled.div
   `width: 9ch;
@@ -69,16 +71,16 @@ function App() {
         </button>
 
         <button className="button" style={{ color: 'black' }} onClick={() => {openInNewTab("mailto:davidmickev@gmail.com")}}>
-          <FontAwesomeIcon  size = "4x" icon={faMailchimp} />
+        <FontAwesomeIcon icon={faEnvelope} size = "4x" />
           <span id ="textlink"> Contact </span>
         </button>
       </div>
+      
 
       <section className="et-hero-tabs" data-image-source="./icons/dmlogo.png">
         <h1>
           <div id="name">
             <span className="logo">
-              {/*Name Animation*/}
               <img id="./icons/dmlogo.png" alt=""></img>
               <span id="1" className="letter" style={{ color: randColor() }} >D</span>
               <span id="2" className="letter" style={{ color: randColor() }} >a</span>
@@ -97,12 +99,14 @@ function App() {
               <span id="15" className="letter" style={{ color: randColor() }} >u</span>
               <span id="16" className="letter" style={{ color: randColor() }} >s</span>
               <br></br>
+              
 
               <p>
               I'm a software engineer from Chicago ,IL.
+
               <br/>
-              My passion is Software Engineering, Algorithm design and Machine Learning.
               <br/>
+
               </p>
             </span>
           </div>
@@ -119,7 +123,7 @@ function App() {
             </div>
           </div>
         </h1>
-        
+
 
         <div className="et-hero-tabs-container">
           <a className="et-hero-tab" href="#tab-about">About</a>
@@ -134,7 +138,7 @@ function App() {
 
       <main className="et-main">
         <section className="et-slide" id="tab-about">
-          <Fade top>
+          <motion.div top>
             <div>
             <h1>About me</h1>
             <br/>
@@ -148,11 +152,11 @@ function App() {
             <br></br>
             </p>
             </div>
-          </Fade>
+          </motion.div>
         </section>
 
         <section className="et-slide" id="tab-skills">
-          <Fade top>
+          <motion.div top>
             <div>
 
               <h1>Skills and Coursework</h1>
@@ -165,6 +169,7 @@ function App() {
               <p>
               <br/>
               Python | Java | Scala | C/C++ | R | SQL 
+              <br/>
               English | Lithuanian
               </p>
             
@@ -185,11 +190,11 @@ function App() {
               Obj-Oriented Langs & Envs | Database Systems | Android Development | Computer Graphics
               </p>
               </div>
-          </Fade>
+          </motion.div>
         </section>
         
         <section className="et-slide" id="tab-projects">
-          <Fade top>
+          <motion.div top>
             <div>
             <h1>Projects</h1>
             <br/>
@@ -198,7 +203,7 @@ function App() {
               <a href="https://github.com/davidmickev"> github </a> projects
             </p>
             </div>
-          </Fade>
+          </motion.div>
         </section>
 
         <div>
@@ -206,7 +211,7 @@ function App() {
         </div>
 
         <section className="et-slide" id="tab-other">
-          <Fade top>
+          <motion.div top>
             <div>
             <h1>Research</h1>
             <p>
@@ -232,15 +237,15 @@ function App() {
             
             </div>
 
-          </Fade>
+          </motion.div>
         </section>
         <section className="et-slide" id="tab-contact">
-          <Fade top>
+          <motion.div top>
             <h1>Contact</h1>
             <p>
               Email me <a href="mailto:davidmickev@gmail.com">here </a> or visit any of the links above! <br/>
               Thanks for visiting!</p>
-          </Fade>
+          </motion.div>
         </section>
 
         <div className="mainfrog">
