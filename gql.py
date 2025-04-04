@@ -8,7 +8,7 @@ api_token = "YOURSECRET_TOKEN"
 headers = {'Authorization': 'token %s' % api_token}
 
 r = requests.post(url=url, json=json, headers=headers)
-#pprint.pprint(r.json())
+pprint.pprint(r.json())
 
 # If you want to save the json
 f = open("gitinfo.json","w")

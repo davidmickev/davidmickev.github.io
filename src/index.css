@@ -23,7 +23,7 @@ code {
 body {
   font-family: monospace;
   width: 100%;
-  position:absolute;
+  position:relative;
 }
 
 p {
@@ -34,19 +34,6 @@ p {
   
 }
 
-
-#links {
-  z-index: 1;
-  background-color: transparent;
-  position: relative;
-  top: 0px;
-  flex-direction: column;
-  align-items: absolute;
-  display: block;
-  padding: 20px 0;
-  float: 'right',
-  
-}
 
 button {
   font-size: 10px;
@@ -71,9 +58,13 @@ button {
 }
 
 #name {
-  margin-top: -15%;
-  margin-bottom: 25%;
-  background-image: './icons/dmlogo.png';
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack letters vertically */
+  align-items: center; /* Center the letters horizontally */
+  justify-content: center; /* Center the letters vertically */
+  position: relative; /* Ensure it doesn't overlap other content */
+  z-index: 1; /* Lower z-index to avoid overlapping higher elements */
+  margin-top: 20px; /* Add spacing to separate it from other content */
 }
 
 .logo {
@@ -81,6 +72,7 @@ button {
   display: block;
   background-image: './icons/dmlogo.png';
   /*background-image: 'url(dmlogo.png)';*/
+  
 }
 
 .letter {
@@ -94,6 +86,23 @@ button {
   transition: top ease 0.1s;
   transition-delay: 2s;
   opacity: 0.8;
+  animation: bounce 0.6s;
+}
+
+.letter:hover {
+  animation: bounce 0.6s; /* Apply bounce animation on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0); /* Default position */
+  }
+  40% {
+    transform: translateY(-10px); /* Move up */
+  }
+  60% {
+    transform: translateY(-5px); /* Slightly lower bounce */
+  }
 }
 
 @keyframes mymove {
@@ -116,3 +125,23 @@ button {
   background: #b39ddb;
 }
 
+
+#links {
+  z-index: 100;
+  background-color: transparent;
+  position: absolute;
+  margin-top: 0px;
+  top: 150px;
+  left: 0px;
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  padding: 20px 0;
+  margin: 0px;
+}
+
+.zoom-image {
+  width: 100%; /* Ensure the image scales to fit the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline spacing */
+}

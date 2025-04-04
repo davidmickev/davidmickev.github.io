@@ -14,22 +14,105 @@
     background-color: #ffffff;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
-    /* height: 200px; */
-    max-height: 35vh;
+
     -webkit-box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    justify-content: space-between;
+    padding: 1em
     
   }
 
 .grid {
     min-height: 100%;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     margin: 5%;
+    row-gap: 10px; /* Adjust vertical spacing */
+    column-gap: 1%; /* Adjust horizontal spacing */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns dynamically */
     
   }
-  .grid > div {
-    flex-basis: calc(30% - 40px);
+  
+
+  .card-subtitle {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 10px;
   }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .card button {
+    padding: 10px 15px; /* Add padding for a better look */
+    font-size: 1rem; 
+    font-weight: bold; 
+    color: #ffffff;
+    text-align: center;
+    background-color: #39178f; /* Primary blue color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add hover effects */
+    flex-grow: 1; /* Allow this section to grow and take up available space */
+    margin-bottom: 10px; /* Add spacing below the languages */
+  }
+  
+  .card button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .card button:active {
+    background-color: #003f7f; /* Even darker blue on click */
+    transform: translateY(0); /* Reset lift on click */
+  }
+
+
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px; /* Add spacing below the image */
+  }
+
+  .card-body {
+    padding: 2em; /* Adjust padding for card body */
+    text-align: center; /* Center text in card body */
+  }
+
+  .card-footer {
+    background-color: #f8f9fa; /* Light gray background for footer */
+    border-top: 1px solid rgba(221, 0, 0, 0.125); /* Border on top of footer */
+    text-align: center; /* Center text in footer */
+  }
+
+  // .card.languages {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   flex-wrap: wrap; /* Allow languages to wrap to the next line */
+  //   border-radius: 10px 10px 0px 0px;
+  //   font-size: 10px;
+  // }
+
+  .card .languages {
+    flex-grow: 1; 
+    margin-bottom: 10px; 
+    text-align: center;
+    font-size: 10px;
+}
+
+.languages {
+    flex-grow: 1; /* Allow this section to grow and take up available space */
+    margin-bottom: 10px; /* Add spacing below the languages */
+    text-align: center;
+    font-size: 10px; /* Ensure the font size is applied */
+}

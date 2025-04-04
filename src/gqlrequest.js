@@ -2,38 +2,9 @@ import fetch from 'node-fetch';
 // import your GITHUB_TOKEN from another file(keep private).
 import secret_token from './config.js';
 
-// const queryRepo = {
-// 	query: `
-//    query { 
-//   user(login: "davidmickev") {
-//     login
-//     name
-//     avatarUrl
-//     bio
-//     bioHTML
-//   }
-//   viewer {
-//     repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, orderBy: {field:NAME, direction:ASC}) {
-//       pageInfo {hasNextPage, endCursor}
-//       nodes {
-//         name
-//         description
-//         url
-//         forkCount
-//         stargazerCount
-//         updatedAt
-//     
-//         owner {
-//           login
-//         }
-//         defaultBranchRef {
-//           name
-
 const variables = {
 	githubToken: secret_token,
 	githubLogin: 'davidmickev',
-	//reposToFetch: 20
-
 };
 
 const queryRepo = {

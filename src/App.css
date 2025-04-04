@@ -60,3 +60,9 @@
     transform: translateY(-5px);
   }
 }
+
+.zoom-image {
+  width: 100%; /* Ensure the image scales to fit the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any inline spacing */
+}
